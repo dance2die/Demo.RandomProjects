@@ -40,7 +40,7 @@ namespace Demo.RandomProjects.PostfixProcessor
 
 		private static bool IsOperator(string value)
 		{
-			return !(OperatorFactory.CreateOperator(value) is NullOperator);
+			return OperatorFactory.CreateOperator(value) is IOperator;
 		}
 
 		private static bool IsNumeric(string value)

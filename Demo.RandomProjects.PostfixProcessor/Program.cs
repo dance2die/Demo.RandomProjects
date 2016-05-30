@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Demo.RandomProjects.PostfixProcessor.Operators;
 
 namespace Demo.RandomProjects.PostfixProcessor
 {
@@ -62,72 +63,5 @@ namespace Demo.RandomProjects.PostfixProcessor
 			int result;
 			return int.TryParse(value, out result);
 		}
-	}
-
-	public class OperatorFactory
-	{
-		public static IOperator CreateOperator(string value)
-		{
-			switch (value)
-			{
-				case "+":
-					return new AdditionOperator();
-				case "-":
-					return new SubtractionOperator();
-				case "*":
-				case "x":
-				case "X":
-					return new MultiplicationOperator();
-				case "/":
-					return new DivisionOperator();
-				default:
-					return new NullOperator();
-			}
-		}
-	}
-
-	public class AdditionOperator : IOperator
-	{
-		public int Operate(int leftValue, int rightValue)
-		{
-			return leftValue + rightValue;
-		}
-	}
-
-	public class SubtractionOperator : IOperator
-	{
-		public int Operate(int leftValue, int rightValue)
-		{
-			return leftValue - rightValue;
-		}
-	}
-
-	public class MultiplicationOperator : IOperator
-	{
-		public int Operate(int leftValue, int rightValue)
-		{
-			return leftValue * rightValue;
-		}
-	}
-
-	public class DivisionOperator : IOperator
-	{
-		public int Operate(int leftValue, int rightValue)
-		{
-			return leftValue / rightValue;
-		}
-	}
-
-	public class NullOperator : IOperator
-	{
-		public int Operate(int leftValue, int rightValue)
-		{
-			throw new NotImplementedException();
-		}
-	}
-
-	public interface IOperator
-	{
-		int Operate(int leftValue, int rightValue);
 	}
 }

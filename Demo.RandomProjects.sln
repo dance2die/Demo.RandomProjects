@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.RandomProjects.PostfixProcessor", "Demo.RandomProjects.PostfixProcessor\Demo.RandomProjects.PostfixProcessor.csproj", "{24DB9681-68CE-4794-8369-7060FD4DAD44}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.RandomProjects.Anagram", "Demo.RandomProjects.Anagram\Demo.RandomProjects.Anagram.csproj", "{B6432AEB-EDA3-453E-B1AD-56CD02C67806}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{24DB9681-68CE-4794-8369-7060FD4DAD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24DB9681-68CE-4794-8369-7060FD4DAD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24DB9681-68CE-4794-8369-7060FD4DAD44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,6 +49,7 @@
     <Compile Include="Operators\MultiplicationOperator.cs" />
     <Compile Include="Operators\NullOperator.cs" />
     <Compile Include="Operators\OperatorFactory.cs" />
+    <Compile Include="PostfixProcessor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Operators\SubtractionOperator.cs" />

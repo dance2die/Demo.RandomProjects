@@ -7,9 +7,9 @@ namespace Demo.RandomProjects.PostfixProcessor
 	{
 		public static void Main(string[] args)
 		{
-			const string postfixString = "5 1 2 + 4 x + 3 -";
-
-			DisplayResultForPostfixNotation(postfixString);
+			DisplayResultForPostfixNotation("5 1 2 + 4 x + 3 -");
+			DisplayResultForPostfixNotation("5 7 + 6 2 -  *");
+			DisplayResultForPostfixNotation("4 2 3 5 1 - + * +");
 		}
 
 		private static void DisplayResultForPostfixNotation(string postfixString)
@@ -17,7 +17,7 @@ namespace Demo.RandomProjects.PostfixProcessor
 			var values = postfixString.Split(new []{' '}, StringSplitOptions.RemoveEmptyEntries);
 
 			var result = CalculatePostfixString(values);
-			Console.WriteLine(result);
+			Console.WriteLine("{0} => {1}", postfixString, result);
 		}
 
 		private static int CalculatePostfixString(string[] values)

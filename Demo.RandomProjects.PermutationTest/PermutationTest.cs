@@ -29,7 +29,7 @@ namespace Demo.RandomProjects.PermutationTest
 				new [] {3, 2, 1}
 			};
 
-			var actual = _sut.GetPermutations(3).ToList();
+			var actual = _sut.GetPermutations(Enumerable.Range(1, 3)).ToList();
 
 			Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
 		}
@@ -70,15 +70,15 @@ namespace Demo.RandomProjects.PermutationTest
 
 	public class Permutation
 	{
-		public List<IEnumerable<int>> GetPermutations(int permutationCount)
+		public List<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> enumerable)
 		{
-			var list = Enumerable.Range(1, permutationCount).ToList();
+			List<T> list = enumerable.ToList();
 
 			return GetPermutations(list, 0, list.Count - 1).ToList();
 		}
 
-		private IEnumerable<IEnumerable<int>> GetPermutations(
-			IEnumerable<int> enumerable, int startCount, int permutationCount)
+		private IEnumerable<IEnumerable<T>> GetPermutations<T>(
+			IEnumerable<T> enumerable, int startCount, int permutationCount)
 		{
 			var list = enumerable.ToList();
 
@@ -94,7 +94,7 @@ namespace Demo.RandomProjects.PermutationTest
 			}
 		}
 
-		private void Swap(IList<int> list, int listIndex1, int listIndex2)
+		private void Swap<T>(IList<T> list, int listIndex1, int listIndex2)
 		{
 			try
 			{

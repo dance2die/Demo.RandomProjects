@@ -34,11 +34,29 @@ namespace Demo.RandomProjects.PermutationTest
 			Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
 		}
 
+		//[Fact]
+		//public void TestStringPumutation()
+		//{
+		//	var expected = new List<IEnumerable<string>>
+		//	{
+		//		new [] {"1", "2", "3"},
+		//		new [] {"1", "3", "2"},
+		//		new [] {"2", "1", "3"},
+		//		new [] {"2", "3", "1"},
+		//		new [] {"3", "1", "2"},
+		//		new [] {"3", "2", "1"}
+		//	};
+
+		//	var actual = _sut.GetPermutations("123".ToArray()).ToList();
+
+		//	Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
+		//}
+
 		/// <summary>
 		/// Compare a List of integer arrays.
 		/// </summary>
 		//private bool IsMultidimensionalArraySequenceEqual(List<int[]> list1, List<int[]> list2)
-		private bool IsMultidimensionalArraySequenceEqual(List<IEnumerable<int>> list1, List<IEnumerable<int>> list2)
+		private bool IsMultidimensionalArraySequenceEqual<T>(List<IEnumerable<T>> list1, List<IEnumerable<T>> list2)
 		{
 			for (int i = 0; i < list1.Count; i++)
 			{
@@ -48,13 +66,6 @@ namespace Demo.RandomProjects.PermutationTest
 
 			return true;
 		}
-
-		//[Fact]
-		//public void TestStringPumutation()
-		//{
-
-		//}
-
 	}
 
 	public class Permutation

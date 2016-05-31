@@ -6,11 +6,11 @@ namespace Demo.RandomProjects.PermutationTest
 {
 	public class Permutation
 	{
-		public List<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> enumerable)
+		public IEnumerable<IEnumerable<T>> GetPermutations<T>(IEnumerable<T> enumerable)
 		{
 			List<T> list = enumerable.ToList();
 
-			return GetPermutations(list, 0, list.Count - 1).ToList();
+			return GetPermutations(list, 0, list.Count - 1);
 		}
 
 		private IEnumerable<IEnumerable<T>> GetPermutations<T>(

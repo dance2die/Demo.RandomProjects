@@ -34,23 +34,37 @@ namespace Demo.RandomProjects.PermutationTest
 			Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
 		}
 
-		//[Fact]
-		//public void TestStringPumutation()
-		//{
-		//	var expected = new List<IEnumerable<string>>
-		//	{
-		//		new [] {"1", "2", "3"},
-		//		new [] {"1", "3", "2"},
-		//		new [] {"2", "1", "3"},
-		//		new [] {"2", "3", "1"},
-		//		new [] {"3", "1", "2"},
-		//		new [] {"3", "2", "1"}
-		//	};
+		[Fact]
+		public void TestStringPumutation()
+		{
+			var expected = new List<IEnumerable<char>>
+			{
+				new [] {'1', '2', '3'},
+				new [] {'1', '3', '2'},
+				new [] {'2', '1', '3'},
+				new [] {'2', '3', '1'},
+				new [] {'3', '1', '2'},
+				new [] {'3', '2', '1'}
+			};
 
-		//	var actual = _sut.GetPermutations("123".ToArray()).ToList();
+			var actual = _sut.GetPermutations("123".ToCharArray()).ToList();
 
-		//	Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
-		//}
+			Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
+		}
+
+		[Fact]
+		public void TestStringPumutation2()
+		{
+			var expected = new List<IEnumerable<char>>
+			{
+				new [] {'a', 'b'},
+				new [] {'b', 'a'},
+			};
+
+			var actual = _sut.GetPermutations("ab".ToCharArray()).ToList();
+
+			Assert.True(IsMultidimensionalArraySequenceEqual(expected, actual));
+		}
 
 		/// <summary>
 		/// Compare a List of integer arrays.

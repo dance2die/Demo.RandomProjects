@@ -40,8 +40,6 @@ namespace Demo.RandomProjects.Anagram
 					{
 						yield return stringPermutation;
 					}
-
-					Swap(ref characters[recursionDepth], ref characters[i]);
 				}
 			}
 		}

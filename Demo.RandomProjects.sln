@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.RandomProjects.Postfix
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.RandomProjects.Anagram", "Demo.RandomProjects.Anagram\Demo.RandomProjects.Anagram.csproj", "{B6432AEB-EDA3-453E-B1AD-56CD02C67806}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{CE7CCBB2-065F-4120-B541-C624F64E19D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.RandomProjects.PermutationTest", "Demo.RandomProjects.PermutationTest\Demo.RandomProjects.PermutationTest.csproj", "{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,8 +25,15 @@ Global
 		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6432AEB-EDA3-453E-B1AD-56CD02C67806}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C86A9C4D-ED18-46E3-85D3-9E8AB0B4AD23} = {CE7CCBB2-065F-4120-B541-C624F64E19D5}
 	EndGlobalSection
 EndGlobal
